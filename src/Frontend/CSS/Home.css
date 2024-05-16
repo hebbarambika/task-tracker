@@ -1,0 +1,56 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+.header-left {
+	flex: 1;
+}
+
+.header-right {
+	display: flex;
+	align-items: center;
+}
+/* .user-icon {
+	height: 500px;
+	width: 500px;
+} */
+.u1 {
+	height: 100px;
+	width: 100px;
+}
+.Task-Contaoner {
+	padding: 3pc;
+	background-color: aqua;
+	min-height: 500px;
+	width: 1050px;
+	margin-left: 5pc;
+	margin-right: 5pc;
+	/* display: flex; */
+	justify-content: space-between;
+	align-items: center;
+}
+.filter1 {
+	margin-right: 5pc;
+}
+.filters {
+	margin-bottom: 2pc;
+}
+.add-task-button {
+	background-color: #007bff; /* Blue background color */
+	color: white; /* White text color */
+	padding: 10px 20px; /* Padding around the text */
+	border: none; /* No border */
+	border-radius: 5px; /* Rounded corners */
+	cursor: pointer; /* Show pointer cursor on hover */
+	transition: background-color 0.3s; /* Smooth transition for background color change */
+	margin-left: auto; /* Push the button to the right */
+}
+.add-task-button:hover {
+	background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* .sort {
+} */
