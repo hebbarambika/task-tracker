@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from "./Frontend/Components/HomePage";
 import LoginPage from "./Frontend/Components/LoginPage";
 import Signup from "./Frontend/Components/Signup";

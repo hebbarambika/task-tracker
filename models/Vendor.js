@@ -1,18 +1,17 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const userSchema = new Schema({
+// Vendor Schema
+const vendorSchema = new Schema({
 	role: {
 		type: String,
-		enum: ["buyer", "vendor"],
-		default: "buyer",
+		enum: ["vendor"],
+		default: "vendor",
 		required: true,
 	},
 	companyName: {
 		type: String,
-		required: function () {
-			return this.role === "vendor";
-		},
+		required: true,
 	},
 	companyWebsite: {
 		type: String,
@@ -62,7 +61,33 @@ const userSchema = new Schema({
 		default: Date.now,
 		required: true,
 	},
+	// Address fields
+	street: {
+		type: String,
+		required: true,
+	},
+	additionalInfo: {
+		type: String,
+	},
+	zipCode: {
+		type: String,
+		required: true,
+	},
+	place: {
+		type: String,
+		required: true,
+	},
+	country: {
+		type: String,
+		required: true,
+	},
+	// Vendor-specific field
+	vendorID: {
+		type: String,
+		default: "", // or null, or any other default value indicating no vendorID assigned yet
+	},
 });
 
-const User = mongoose.model("User", userSchema);
-module.exports = User;
+const Vendor = mongoose.model("Vendor", vendorSchema);
+
+module.exports = Vendor;
